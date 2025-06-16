@@ -5,16 +5,13 @@
   "type": "module",
   "main": "build/index.js",
   "bin": {
-    "aha-mcp": "./build/index.js"
+    "aha-mcp": "build/index.js"
   },
-  "files": [
-    "build/**/*"
-  ],
   "scripts": {
     "build": "tsc && chmod +x build/index.js",
+    "prepare": "npm run build",
     "start": "node build/index.js",
-    "mcp-start": "npm run build && npm run start",
-    "prepublishOnly": "npm run build"
+    "mcp-start": "npm run build && npm run start"
   },
   "keywords": [
     "aha",
