@@ -1,6 +1,6 @@
 # aha-mcp
 
-Model Context Protocol (MCP) server for accessing Aha! records through the MCP. This integration enables seamless interaction with Aha! features, requirements, and pages directly through the Model Context Protocol.
+Model Context Protocol (MCP) server for accessing Aha! records through the MCP. This integration enables seamless interaction with Aha! features, requirements, ideas, and pages directly through the Model Context Protocol.
 
 ## Prerequisites
 
@@ -240,6 +240,29 @@ Searches for Aha! documents.
   "total_results": 1
 }
 ```
+### 4. get_idea
+
+Retrieves an Aha! idea by reference number.
+
+**Parameters:**
+
+- `reference` (required): Reference number of the idea (e.g., "RAS-I-50")
+
+**Example:**
+```json
+{
+  "reference": "RAS-I-50"
+}
+```
+
+**Response:**
+```json
+{
+  "reference_num": "RAS-I-50",
+  "name": "Idea title"
+}
+```
+
 
 ## Example Queries
 
@@ -247,6 +270,7 @@ Searches for Aha! documents.
 - "Fetch the product roadmap page ABC-N-213"
 - "Search for pages about launch planning"
 - "Get requirement ADT-123-1"
+- "Get idea RAS-I-50"
 - "Find all pages mentioning Q2 goals"
 
 ## Configuration Options
