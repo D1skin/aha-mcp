@@ -228,12 +228,12 @@ export class Handlers {
       query,
       searchableType = "Page",
       page,
-      perPage,
+      per_page,
     } = request.params.arguments as {
       query: string;
       searchableType?: string;
       page?: number;
-      perPage?: number;
+      per_page?: number;
     };
 
     if (!query) {
@@ -247,7 +247,7 @@ export class Handlers {
           query,
           searchableType: [searchableType],
           page,
-          perPage,
+          per_page,
         }
       );
 

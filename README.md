@@ -216,7 +216,7 @@ Searches for Aha! documents.
 - `query` (required): Search query string
 - `searchableType` (optional): Type of document to search for (e.g., "Page"). Defaults to "Page"
 - `page` (optional): Page number for pagination. Defaults to `1`
-- `perPage` (optional): Number of results per page. Defaults to `20`
+- `per_page` (optional): Number of results per page. Defaults to `20`
 
 **Example:**
 
@@ -225,7 +225,7 @@ Searches for Aha! documents.
   "query": "product roadmap",
   "searchableType": "Page",
   "page": 2,
-  "perPage": 10
+  "per_page": 10
 }
 ```
 
