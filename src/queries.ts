@@ -44,12 +44,10 @@ export const searchDocumentsQuery = `
     $query: String!
     $searchableType: [String!]!
     $page: Int
-    $per_page: Int
   ) {
     searchDocuments(
       filters: { query: $query, searchableType: $searchableType }
       page: $page
-      per_page: $per_page
     ) {
       nodes {
         name
