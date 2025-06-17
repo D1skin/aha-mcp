@@ -129,7 +129,7 @@ class AhaMcp {
                 description: "Page number for pagination",
                 default: 1,
               },
-              perPage: {
+              per_page: {
                 type: "integer",
                 description: "Number of results per page",
                 default: 20,
