@@ -49,7 +49,7 @@ export const searchDocumentsQuery = `
     searchDocuments(
       filters: { query: $query, searchableType: $searchableType }
       page: $page
-      per_page: $perPage
+      perPage: $perPage
     ) {
       nodes {
         name
