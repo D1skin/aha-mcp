@@ -124,6 +124,16 @@ class AhaMcp {
                 description: "Type of document to search for (e.g., Page)",
                 default: "Page",
               },
+              page: {
+                type: "integer",
+                description: "Page number for pagination",
+                default: 1,
+              },
+              perPage: {
+                type: "integer",
+                description: "Number of results per page",
+                default: 20,
+              },
             },
             required: ["query"],
           },
