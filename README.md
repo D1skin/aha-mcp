@@ -215,13 +215,17 @@ Searches for Aha! documents.
 
 - `query` (required): Search query string
 - `searchableType` (optional): Type of document to search for (e.g., "Page"). Defaults to "Page"
+- `page` (optional): Page number for pagination. Defaults to `1`
+- `perPage` (optional): Number of results per page. Defaults to `20`
 
 **Example:**
 
 ```json
 {
   "query": "product roadmap",
-  "searchableType": "Page"
+  "searchableType": "Page",
+  "page": 2,
+  "perPage": 10
 }
 ```
 
@@ -229,15 +233,18 @@ Searches for Aha! documents.
 
 ```json
 {
-  "results": [
+  "nodes": [
     {
       "reference_num": "ABC-N-123",
       "name": "Product Roadmap 2025",
-      "type": "Page",
+      "searchableType": "Page",
       "url": "https://company.aha.io/pages/ABC-N-123"
     }
   ],
-  "total_results": 1
+  "currentPage": 2,
+  "totalCount": 50,
+  "totalPages": 5,
+  "isLastPage": false
 }
 ```
 ### 4. get_idea

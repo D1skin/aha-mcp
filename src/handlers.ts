@@ -224,9 +224,16 @@ export class Handlers {
   }
 
   async handleSearchDocuments(request: any) {
-    const { query, searchableType = "Page" } = request.params.arguments as {
+    const {
+      query,
+      searchableType = "Page",
+      page,
+      perPage,
+    } = request.params.arguments as {
       query: string;
       searchableType?: string;
+      page?: number;
+      perPage?: number;
     };
 
     if (!query) {
@@ -239,6 +246,8 @@ export class Handlers {
         {
           query,
           searchableType: [searchableType],
+          page,
+          perPage,
         }
       );
 
