@@ -40,8 +40,17 @@ export const getRequirementQuery = `
 `;
 
 export const searchDocumentsQuery = `
-  query SearchDocuments($query: String!, $searchableType: [String!]!) {
-    searchDocuments(filters: {query: $query, searchableType: $searchableType}) {
+  query SearchDocuments(
+    $query: String!
+    $searchableType: [String!]!
+    $page: Int
+    $perPage: Int
+  ) {
+    searchDocuments(
+      filters: { query: $query, searchableType: $searchableType }
+      page: $page
+      perPage: $perPage
+    ) {
       nodes {
         name
         url
